@@ -33,6 +33,24 @@ I then created scatter plots showing each variable plotted against the Median Va
 
 
 ## 3. Inferential Statistics
+In the section of the project I performed a t-test to determine if there was significant difference between Median House Prices in areas that are by the Charles River in Boston vs areas that are not by the river.
+
+### 3.1 Looking more closely at the "By River" variable
+Before jumping into performing a t-test I first took a closer look at the "By_River" variable to get the counts of the number of observations in each group ("Next to" and "Away from" the river. 
+I also compared the distribution of the two groups and looked at their descriptive statistics. I noted the large difference in the size of both groups and that both had a large cohort of datapoints at the near the max of both ranges.
+
+### 3.2 T-test
+In the T-Test section itself I:
+* First described what a T-Test is and why it was an appropriate  test.
+* Stated the Null and Alternative Hypothesis for the test.
+* Checked to see if the dataset met the requirement for a T-Test and noted that it that outliers, the distribution of each group, and homogeneity of variances needed to investigated further. 
+* Removed outliers from the dataset - using the definition of 1.5 times the Interquartile range above or below the 1st and 3rd quartiles. 
+* Confirmed that both group were roughly normally distributed using the stats.normaltest() function.
+* Confirmed there was homogeneity of variances using stats.Levene(). 
+
+### 3.3 T-Test Results
+Once I had confirmed all requirements for a T-Test had been met I went ahead with the test and confirmed there was a significant difference between the two groups. 
+
 
 ## 4 Predicting House Prices Using a Neural Network
 
