@@ -42,16 +42,16 @@ I then created scatter plots showing each variable plotted against the Median Va
 In the section of the project I performed a t-test to determine if there was significant difference between Median House Prices in areas that are by the Charles River in Boston vs areas that are not by the river.
 
 ### 3.1 Looking more closely at the "By River" variable
-Before jumping into performing a t-test I first took a closer look at the "By_River" variable to get the counts of the number of observations in each group ("Next to" and "Away from" the river. 
+Before jumping into performing a t-test I first took a closer look at the "By_River" variable to get the counts of the number of observations in each group ("Next to" and "Away from" the river). 
 I also compared the distribution of the two groups and looked at their descriptive statistics. I noted the large difference in the size of both groups and that both had a large cohort of datapoints at the near the max of both ranges.
 
 ### 3.2 T-test Set-up
 In the this section I:
 * First described what a T-Test is and why it was an appropriate  test.
 * Stated the Null and Alternative Hypothesis for the test.
-* Checked to see if the dataset met the requirement for a T-Test and noted that it that outliers, the distribution of each group, and homogeneity of variances needed to investigated further. 
+* Checked to see if the dataset met the requirement for a T-Test and noted that it that outliers, the distribution of each group, and homogeneity of variances needed to be investigated further. 
 * Removed outliers from the dataset - using the definition of 1.5 times the Interquartile range above or below the 1st and 3rd quartiles. 
-* Confirmed that both group were roughly normally distributed using the stats.normaltest() function.
+* Confirmed that both groups were roughly normally distributed using the stats.normaltest() function.
 * Confirmed there was homogeneity of variances using stats.Levene(). 
 
 ### 3.3 T-Test Results
@@ -63,7 +63,7 @@ It also contains the research that went into the creation of the model and the s
 
 **NOTE** 
 There a several test models in this section that can take quite a long time to run. This is because I tested most of the models by running them 5 times and getting the average of the 5 results.
-In order to prevent a person from running "All Cells" in the accompanying Jupyter Notebook and have to wait a long period of time to get to the final model I have "commented out" some of the code to used to test the models. However, I have manually recorded the results achieved in the cell following the code.   
+In order to prevent a person from running "All Cells" in the accompanying Jupyter Notebook and having to wait a long period of time to get to the final model I have "commented out" some of the code to used to test the models. However, I have manually recorded the results achieved in the cell following the code.   
 
 ### 4.1 Preprocessing
 Here I prepared the data to be fed into the model by going through a preprocessing checklist of:
@@ -77,7 +77,7 @@ Before standardizing I also shuffled the data and split it into training and tes
 Once the data has been preprocessed, I created a model with a basic configuration to act as a baseline for further iterations to be measured against. Ironically and a little frustratingly this baseline model produced some of the best predictions when compared to the subsequent "improved" models. 
 
 ### 4.3 Factors to Consider When Creating Further Models
-Before continuing to create updated models I researched what the different elements of a model do. The elements I looked at include:
+Before continuing to create updated models I researched what the different elements of a model do. The elements I looked at included:
 1. Model Selection
 2. Density 
 3. Number of Layers
@@ -92,7 +92,7 @@ Now that I had a better idea of what each of the elements of a model did, I atte
 The test I performed included:
 1. Various Batch Sizes (32, 16, 4, 2) - I found that smaller batch sizes tended to perform better
 2. Increasing the number of epochs - After testing 500 epoch I found that the model prediction stopped improving at around the 250 epoch mark so I set the standard number of epochs at 300 and introduced early stopping. 
-3. Number of Units per Layer - There was no conclusive result showing that increasing the size of the hidden layer beyond the size of the inputs led to a increase in performance.
+3. Number of Units per Layer - There was no conclusive result showing that increasing the size of the hidden layer beyond the size of the inputs led to better predictions.
 4. Number of Units per Layer - Here I added second and third layers of various sizes. Having just 1 additional hidden layer seemed to perform better than three. 
 
 ### 4.5 Further Tuning 
@@ -125,4 +125,4 @@ To finish a created a table of "Predicted" and "Real" values along with percenta
 
 ## 5. References 
 This section contains the references used in the project. All references are noted in line using a "[1]" in next to the relevant text. 
-Code that has been adapted from other sources is referenced with the link to the source in a comment at the top of the code
+Code that has been adapted from other sources is referenced with the link to the source in a comment at the top of the code.
